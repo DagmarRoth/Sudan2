@@ -1,69 +1,82 @@
-# Sudan
+# Mapping Six Months of Internal Displacement in Sudan
 
-Mapping Six Months of ID Through Conflict in Sudan
+### An interactive visualization of conflict-driven movement across Sudan (2024–2025)
 
-This project visualizes six months of internal displacement (ID) across Sudan as conflict intensified throughout 2024–2025. The goal was to turn raw, event-level conflict data into a clear, interactive map that helps readers understand how violence has reshaped mobility, safety, and humanitarian needs across the country. The project aims to give viewers both a geographical and temporal sense of how the crisis has unfolded.
+This project transforms raw conflict and displacement data into an interactive map that illustrates how violence has reshaped population movements across Sudan. By merging geolocated conflict events with displacement indicators, the visualization highlights both the scale and timing of internal displacement over a six-month window.
 
-Data Sources & Collection Process
+---
 
-This map is based on publicly available conflict-event and displacement-indicator data pulled from:
+## Project Overview
 
-ACLED – Armed Conflict Location & Event Data Project
-https://acleddata.com
+The goal of this project was to:
 
-Used for geolocated violence/event data, actor information, and timestamps.
+- Build an interactive Folium map accessible through a web browser  
+- Show where and when displacement occurred using heatmaps, markers, and time layers  
+- Make complex conflict data understandable for a general audience  
+- Present a standalone, publication-ready HTML map hosted on GitHub Pages  
 
-IOM Displacement Tracking Matrix (DTM)
-https://dtm.iom.int
+The result is a data-driven visualization suitable for journalistic or research use.
 
-Used for internal displacement figures and movement patterns.
+---
 
-Additional background sources such as UN OCHA situation reports and humanitarian briefings.
+## Data Sources and Collection
 
-Data processing workflow:
+### Primary Sources
+- **ACLED – Armed Conflict Location & Event Data Project**  
+  https://acleddata.com  
+  Provides geolocated conflict events, actors, and timelines.
 
-Downloaded raw CSV event data and cleaned missing or malformed coordinate fields.
+- **IOM Displacement Tracking Matrix (DTM)**  
+  https://dtm.iom.int  
+  Provides displacement figures and humanitarian movement data.
 
-Converted displacement and conflict categories into numeric variables suitable for mapping.
+==
+### Data Preparation Process
 
-Sorted events chronologically to create a six-month window.
+1. Downloaded raw CSV data on conflict and displacement  
+2. Cleaned geographic fields and removed missing coordinates  
+3. Standardized timestamps and converted numeric displacement fields  
+4. Filtered the dataset to the relevant six-month period  
+5. Built cumulative and time-based heatmaps in Folium  
+6. Exported the final visualization as `index.html` for GitHub Pages  
 
-Built a Folium map with cumulative heat layers and dynamic markers.
+---
 
-Exported the final interactive visualization into an index.html file for GitHub Pages.
+## Skills and Approaches Developed
 
-New Skills, Tools & Approaches Used
+This project involved several new technical and analytical steps:
 
-This project pushed me into several new technical areas:
+### Mapping and Visualization
+- Constructing interactive geospatial maps with Folium  
+- Layering heatmaps, time-enabled visualizations, and custom markers  
+- Using HTML popups to present structured information  
 
-Interactive mapping with Folium
-Learned how to build choropleths, tile layers, cluster maps, and cumulative heatmaps, and export them cleanly into HTML.
+### Data Wrangling
+- Cleaning and normalizing event-level conflict data in Pandas  
+- Merging displacement datasets with conflict timelines  
+- Preparing geospatial data for web-based mapping  
 
-Data cleaning & transformation with Pandas
-Dealt with missing values, type conversions, sorting events by month, and merging DTM & ACLED indicators.
+### Web Deployment
+- Configuring a GitHub Pages site for a standalone HTML map  
+- Troubleshooting build failures and repository structure  
+- Managing files and metadata required for proper deployment  
 
-Debugging GitHub Pages deployments
-Learned how .gitattributes, .nojekyll, and repository structure affect hosting interactive maps.
+### Story-Driven Analysis
+- Designing the project to support journalistic storytelling  
+- Integrating narrative text with interactive visual components  
 
-Embedding narrative text into HTML maps
-Experimented with ways to integrate explanatory paragraphs below a full-screen visualization.
+---
 
-Overall, the project improved both my data-wrangling fluency and my ability to publish interactive journalism-style graphics on the web.
+## Future Improvements
 
-What I Wanted To Do But Ran Out of Time
+There were several features planned but not yet implemented due to time constraints:
 
-There were several features and enhancements I attempted or planned, but wasn’t able to complete:
+- A more advanced time slider showing month-by-month displacement  
+- Filter controls for event type, actor, or region  
+- Additional contextual tooltips for key cities and conflict zones  
+- A more polished landing page layout on GitHub Pages  
 
-Animated timeline slider
-I wanted the map to show how displacement changed month-to-month, using a dynamic time-slider layer, but implementing Folium’s TimestampedGeoJson requires more restructuring of the dataset.
 
-Add filters for conflict actors or event types
-Ideally, users could toggle RSF vs SAF events or filter by severity.
 
-Hoverable tooltips with narrative context
-I experimented with integrating short text blurbs for key cities (El Fasher, Nyala, Wad Madani), but didn’t fully resolve styling conflicts.
 
-Better front-end design
-With more time, I would refine the map’s surrounding layout so the explanatory text flows more like a news article.
 
-These are all achievable next steps as my technical skills grow.
